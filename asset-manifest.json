@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/task-planner/static/css/main.2e1c07aa.css",
+    "main.css": "/task-planner/static/css/main.6ee08174.css",
     "main.js": "/task-planner/static/js/main.17a9dc58.js",
     "index.html": "/task-planner/index.html",
     "static/media/lock.svg": "/task-planner/static/media/lock.be53002b34b119df3d24bb1a1c9be776.svg",
     "static/media/user.svg": "/task-planner/static/media/user.5478874299ad642ee1032b4391414707.svg",
-    "main.2e1c07aa.css.map": "/task-planner/static/css/main.2e1c07aa.css.map",
+    "main.6ee08174.css.map": "/task-planner/static/css/main.6ee08174.css.map",
     "main.17a9dc58.js.map": "/task-planner/static/js/main.17a9dc58.js.map"
   },
   "entrypoints": [
-    "static/css/main.2e1c07aa.css",
+    "static/css/main.6ee08174.css",
     "static/js/main.17a9dc58.js"
   ]
 }
