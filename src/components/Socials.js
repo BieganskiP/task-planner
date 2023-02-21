@@ -1,5 +1,5 @@
 import css from "./Socials.module.css";
-import icons from "./social.json";
+import icons from "../social.json";
 
 export default function Socials() {
   return (
