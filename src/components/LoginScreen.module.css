@@ -1,6 +1,6 @@
 .container {
   width: 400px;
-  height: 350px;
+  height: 700px;
 
   display: flex;
   flex-direction: column;
@@ -19,6 +19,22 @@
   font-weight: 900;
   font-size: 30px;
 }
-.forgot {
+.link {
   color: darkgray;
+  font-size: 16px;
+  line-height: 18px;
+  transition: color 500ms, font-size 500ms;
+  text-align: center;
+}
+.link:hover {
+  font-size: 17px;
+  color: darkblue;
+}
+.text {
+  margin-top: 20px;
+  color: darkgray;
+  text-align: center;
+}
+.position {
+  margin-top: auto;
 }
