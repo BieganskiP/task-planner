@@ -1,6 +1,6 @@
 import css from "./Input.module.css";
 
-export default function Input({ name, type, value, src }) {
+export default function Input({ name, type, src }) {
   return (
     <label className={css.label} htmlFor={type}>
       {name}

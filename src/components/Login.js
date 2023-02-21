@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Input from "./Input";
+import Button from "./Button";
 import css from "./Login.module.css";
 import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
-import Button from "./Button";
 
 export default function Login() {
   const [email, setEmail] = useState("");

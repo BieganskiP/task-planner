@@ -1,0 +1,19 @@
+{
+  "icons": [
+    {
+      "id": 1,
+      "alt": "Google",
+      "src": "./google.svg"
+    },
+    {
+      "id": 2,
+      "alt": "Facebook",
+      "src": "./facebook.svg"
+    },
+    {
+      "id": 3,
+      "alt": "Twitter",
+      "src": "./twitter.svg"
+    }
+  ]
+}
