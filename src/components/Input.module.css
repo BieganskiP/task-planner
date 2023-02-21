@@ -1,0 +1,22 @@
+.label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  width: 80%;
+  height: 30px;
+  padding-left: 30px;
+
+  background-color: inherit;
+  border: none;
+  border-bottom: 1px lightgray solid;
+}
+.img {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  height: 20px;
+  width: 20px;
+}

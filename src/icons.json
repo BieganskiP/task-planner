@@ -1,0 +1,14 @@
+[
+  {
+    "name": "lock",
+    "src": "./lock.svg",
+    "id": 1,
+    "type": "image/svg"
+  },
+  {
+    "name": "user",
+    "src": "./user.svg",
+    "id": 2,
+    "type": "image/svg"
+  }
+]
