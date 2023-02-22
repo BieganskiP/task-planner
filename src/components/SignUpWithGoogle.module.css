@@ -1,0 +1,20 @@
+.button {
+  background-color: transparent;
+  border: none;
+  border: thin solid #888;
+  box-shadow: 1px 1px 1px grey;
+  padding: 10px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 90px;
+
+  font-weight: 900;
+  transition: all 200ms ease-in;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}

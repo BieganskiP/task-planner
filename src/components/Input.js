@@ -1,6 +1,6 @@
 import css from "./Input.module.css";
 
-export default function Input({ name, type, src }) {
+export default function Input({ name, type, src, onChange }) {
   return (
     <label className={css.label} htmlFor={type}>
       {name}
@@ -9,6 +9,7 @@ export default function Input({ name, type, src }) {
         name={name}
         placeholder={name}
         className={css.input}
+        onChange={onChange}
       ></input>
       <img src={src} alt={name} className={css.img}></img>
     </label>

@@ -1,6 +1,5 @@
 import css from "./LoginScreen.module.css";
 import Login from "./Login";
-import Socials from "./Socials";
 
 export default function LoginScreen() {
   return (
@@ -11,7 +10,7 @@ export default function LoginScreen() {
         Forgot password?
       </a>
       <p className={css.text}>Or sign in with</p>
-      <Socials />
+
       <p className={`${css.text} ${css.position}`}>
         If you dont have acccount yet
       </p>
