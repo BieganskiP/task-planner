@@ -2,7 +2,7 @@ import css from "./LoginScreen.module.css";
 import Login from "./Login";
 import Socials from "./Socials";
 
-export default function WelcomeScreen() {
+export default function LoginScreen() {
   return (
     <div className={css.container}>
       <h1 className={css.header}>Login</h1>
