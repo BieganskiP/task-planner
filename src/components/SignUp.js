@@ -41,25 +41,22 @@ export default function SignUp() {
   };
 
   return (
-    <div>
-      <form onSubmit={wrapperFunction} className={css.form}>
-        <Input
-          name="email"
-          type="email"
-          src={userIcon}
-          onChange={(e) => setEmail(e.target.value)}
-          error={errors.email}
-        />
-        <Input
-          name="password"
-          type="password"
-          src={lockIcon}
-          onChange={(e) => setPassword(e.target.value)}
-          error={errors.password}
-        />
-
-        <Button title="Sign Up" type="submit" />
-      </form>
-    </div>
+    <form onSubmit={wrapperFunction} className={css.form}>
+      <Input
+        name="email"
+        type="email"
+        src={userIcon}
+        onChange={(e) => setEmail(e.target.value)}
+        error={errors.email}
+      />
+      <Input
+        name="password"
+        type="password"
+        src={lockIcon}
+        onChange={(e) => setPassword(e.target.value)}
+        error={errors.password}
+      />
+      <Button title="Sign Up" type="submit" />
+    </form>
   );
 }
