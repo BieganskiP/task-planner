@@ -4,14 +4,16 @@ import Button from "./Button";
 import css from "./Login.module.css";
 import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config/firebase";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const validation = async () => {
     const validationErrors = {};
     if (!email) {
       validationErrors.email = "Email is required";
@@ -26,8 +28,25 @@ export default function Login() {
     }
   };
 
+  const loginWithEmail = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (err) {
+      if (err.code === "auth/wrong-password") {
+        Notify.failure("Wrong email or password!");
+        console.log("Login failed");
+      } else console.log(err.message);
+    }
+  };
+
+  const handleLoginSubmit = (e) => {
+    e.preventDefault();
+    validation();
+    loginWithEmail();
+  };
+
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
+    <form onSubmit={handleLoginSubmit} className={css.form}>
       <Input
         name="email"
         type="email"

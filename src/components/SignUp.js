@@ -6,6 +6,7 @@ import Button from "./Button";
 import css from "./SignUp.module.css";
 import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
+import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 export default function SignUp() {
   const [email, setEmail] = useState("");
@@ -30,7 +31,9 @@ export default function SignUp() {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
     } catch (err) {
-      console.error(err);
+      if (err.code === "auth/email-already-exists") {
+        Notify.failure("Email already exists, please use diffrent email");
+      } else console.log(err.message);
     }
   };
 

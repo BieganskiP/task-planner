@@ -22,7 +22,9 @@ export default function Test() {
     };
 
     getUsersList();
-  }, []);
+  });
+
+
 
   return (
     <div>
