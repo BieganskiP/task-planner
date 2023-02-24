@@ -8,6 +8,11 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 
+Notify.init({
+  width: "280px",
+  position: "middle-top",
+});
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

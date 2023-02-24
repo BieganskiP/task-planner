@@ -8,6 +8,11 @@ import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 
+Notify.init({
+  width: "280px",
+  position: "center-top",
+});
+
 export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
