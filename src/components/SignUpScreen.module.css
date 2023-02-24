@@ -1,46 +1,26 @@
-.container {
-    width: 400px;
-    height: 700px;
-  
-    display: flex;
-    flex-direction: column;
-  
-    padding: 50px;
-    gap: 15px;
-  
-    background-color: #fff;
-  
-    border-radius: 15px;
-    box-shadow: 0.6px 3.1px 2.2px rgba(0, 0, 0, 0.022),
-      1.3px 7.4px 5.3px rgba(0, 0, 0, 0.032),
-      2.5px 13.9px 10px rgba(0, 0, 0, 0.04),
-      4.5px 24.8px 17.9px rgba(0, 0, 0, 0.048),
-      8.4px 46.4px 33.4px rgba(0, 0, 0, 0.058),
-      20px 111px 80px rgba(0, 0, 0, 0.08);
-  }
-  .header {
-    text-transform: uppercase;
-  
-    font-weight: 900;
-    font-size: 30px;
-  }
-  .link {
-    color: darkgray;
-    font-size: 16px;
-    line-height: 18px;
-    transition: color 500ms, font-size 500ms;
-    text-align: center;
-  }
-  .link:hover {
-    font-size: 17px;
-    color: darkblue;
-  }
-  .text {
-    margin-top: 20px;
-    color: darkgray;
-    text-align: center;
-  }
-  .position {
-    margin-top: auto;
-  }
-  
+
+.header {
+  text-transform: uppercase;
+
+  font-weight: 900;
+  font-size: 30px;
+}
+.link {
+  color: darkgray;
+  font-size: 16px;
+  line-height: 18px;
+  transition: color 500ms, font-size 500ms;
+  text-align: center;
+}
+.link:hover {
+  font-size: 17px;
+  color: darkblue;
+}
+.text {
+  margin-top: 20px;
+  color: darkgray;
+  text-align: center;
+}
+.position {
+  margin-top: auto;
+}

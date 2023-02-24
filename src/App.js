@@ -1,13 +1,13 @@
-import LoginScreen from "./components/LoginScreen";
-import SignUpScreen from "./components/SignUpScreen";
+import WelcomeScreen from "./components/WelcomeScreen";
+// import Test from "./components/getDataExample";
 
 import css from "./components/App.module.css";
 
 export default function App() {
   return (
     <div className={css.container}>
-      <LoginScreen />
-      <SignUpScreen />
+      {/* <Test /> */}
+      <WelcomeScreen />
     </div>
   );
 }

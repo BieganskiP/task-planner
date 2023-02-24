@@ -12,7 +12,7 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = async () => {
+  const validation = async () => {
     const validationErrors = {};
     if (!email) {
       validationErrors.email = "Email is required";
@@ -34,14 +34,14 @@ export default function SignUp() {
     }
   };
 
-  const wrapperFunction = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    handleSubmit();
+    validation();
     signIn();
   };
 
   return (
-    <form onSubmit={wrapperFunction} className={css.form}>
+    <form onSubmit={handleSubmit} className={css.form}>
       <Input
         name="email"
         type="email"

@@ -31,7 +31,9 @@ svg,
 video {
   display: block;
 }
-
+button {
+  cursor: pointer;
+}
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
