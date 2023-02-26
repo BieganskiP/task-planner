@@ -22,22 +22,22 @@ export default function Navigation() {
       <div className={css.section}>
         <button type="button" className={css.button}>
           <img src={clipboard} alt="clipboard icon" />
-          Tasks
+          <span className={css.buttonText}>Tasks</span>
         </button>
         <button type="button" className={css.button}>
           <img src={calendar} alt="calendar icon" />
-          Calendar
+          <span className={css.buttonText}>Calendar</span>
         </button>
       </div>
 
       <div className={css.section}>
         <button type="button" className={css.button}>
           <img src={cog} alt="settings icon" />
-          Settings
+          <span className={css.buttonText}>Settings</span>
         </button>
         <button onClick={logout} className={css.button}>
           <img src={exit} alt="exits icon" />
-          Logout{" "}
+          <span className={css.buttonText}>Logout</span>
         </button>
       </div>
     </div>
