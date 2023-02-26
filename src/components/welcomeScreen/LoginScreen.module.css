@@ -18,12 +18,28 @@
     8.4px 46.4px 33.4px rgba(0, 0, 0, 0.058),
     20px 111px 80px rgba(0, 0, 0, 0.08);
 }
-.button {
-  background-color: transparent;
-  border: none;
-}
+.header {
+  text-transform: uppercase;
 
-.button:hover {
-  text-decoration: underline;
-  font-size: 110%;
+  font-weight: 900;
+  font-size: 30px;
+}
+.link {
+  color: darkgray;
+  font-size: 16px;
+  line-height: 18px;
+  transition: all 250ms;
+  text-align: center;
+}
+.link:hover {
+  font-size: 17px;
+  color: darkblue;
+}
+.text {
+  margin-top: 20px;
+  color: darkgray;
+  text-align: center;
+}
+.position {
+  margin-top: auto;
 }

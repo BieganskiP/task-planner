@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Input from "./Input";
-import Button from "./Button";
+import Input from "../utils/Input";
+import Button from "../utils/Button";
 import css from "./Login.module.css";
 import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../config/firebase";
+import { auth } from "../../config/firebase";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 Notify.init({

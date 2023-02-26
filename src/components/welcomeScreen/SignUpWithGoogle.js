@@ -1,4 +1,4 @@
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider } from "../../config/firebase";
 import { signInWithPopup } from "firebase/auth";
 import googleIcon from "../icons/google.svg";
 import css from "./SignUpWithGoogle.module.css";

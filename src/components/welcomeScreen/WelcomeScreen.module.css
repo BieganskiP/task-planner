@@ -18,28 +18,19 @@
     8.4px 46.4px 33.4px rgba(0, 0, 0, 0.058),
     20px 111px 80px rgba(0, 0, 0, 0.08);
 }
-.header {
-  text-transform: uppercase;
+.button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  text-align: center;
+  height: 25px;
+  transition: all 250ms;
+  color: darkgray;
+}
 
-  font-weight: 900;
-  font-size: 30px;
-}
-.link {
-  color: darkgray;
-  font-size: 16px;
-  line-height: 18px;
-  transition: color 500ms, font-size 500ms;
-  text-align: center;
-}
-.link:hover {
-  font-size: 17px;
+.button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 110%;
   color: darkblue;
-}
-.text {
-  margin-top: 20px;
-  color: darkgray;
-  text-align: center;
-}
-.position {
-  margin-top: auto;
 }

@@ -10,9 +10,9 @@ export default function WelcomeScreen() {
     <div className={css.container}>
       {toggleState && <LoginScreen />}
       {!toggleState && <SignUpScreen />}
-      <button type="button" onClick={toggleChecked} className={css.button}>
+      <a onClick={toggleChecked} className={css.button} href="#switch">
         Click here
-      </button>
+      </a>
     </div>
   );
 }

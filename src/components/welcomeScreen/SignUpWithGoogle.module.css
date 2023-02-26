@@ -1,5 +1,12 @@
 .button {
-  background-color: transparent;
+  background: linear-gradient(
+    to right,
+
+    #ffffff 0%,
+    #23a6d5 300%
+  );
+  background-size: 300% auto;
+  background-position: left center;
   border: none;
   border: thin solid #888;
   box-shadow: 1px 1px 1px grey;
@@ -12,9 +19,12 @@
 
   font-weight: 900;
   transition: all 200ms ease-in;
+
+  border-radius: 10px;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: lightblue;
+
+  background-position: right center;
 }

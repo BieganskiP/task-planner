@@ -1,7 +1,7 @@
-import WelcomeScreen from "./components/WelcomeScreen";
-import Profile from "./components/Profile";
+import WelcomeScreen from "./components/welcomeScreen/WelcomeScreen";
+import Profile from "./components/userProfile/Profile";
 import { auth } from "./config/firebase";
-import css from "./components/App.module.css";
+import css from "./App.module.css";
 import { onAuthStateChanged } from "firebase/auth";
 import { useState, useEffect } from "react";
 
@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <div className={css.container}>
-      {userID ? <Profile name={userID} /> : <WelcomeScreen />}
+      {userID ? <Profile /> : <WelcomeScreen />}
     </div>
   );
 }

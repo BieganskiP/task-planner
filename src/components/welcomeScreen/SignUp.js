@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { auth } from "../config/firebase";
+import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import Input from "./Input";
-import Button from "./Button";
+import Input from "../utils/Input";
+import Button from "../utils/Button";
 import css from "./SignUp.module.css";
 import userIcon from "../icons/user.svg";
 import lockIcon from "../icons/lock.svg";
