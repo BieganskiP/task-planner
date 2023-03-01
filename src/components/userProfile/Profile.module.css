@@ -11,4 +11,6 @@
     4.5px 24.8px 17.9px rgba(0, 0, 0, 0.048),
     8.4px 46.4px 33.4px rgba(0, 0, 0, 0.058),
     20px 111px 80px rgba(0, 0, 0, 0.08);
+
+  display: flex;
 }

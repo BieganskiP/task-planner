@@ -1,3 +1,4 @@
+import React from "react";
 import css from "./Navigation.module.css";
 import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
@@ -6,7 +7,7 @@ import cog from "../icons/cog.svg";
 import clipboard from "../icons/clipboard.svg";
 import exit from "../icons/exit.svg";
 
-export default function Navigation() {
+export default function Navigation({ section }) {
   const logout = async () => {
     try {
       await signOut(auth);
@@ -20,18 +21,30 @@ export default function Navigation() {
     <div className={css.container}>
       <h1 className={css.header}>TASK PLANNER</h1>
       <div className={css.section}>
-        <button type="button" className={css.button}>
+        <button
+          type="button"
+          className={css.button}
+          onClick={() => section("tasks")}
+        >
           <img src={clipboard} alt="clipboard icon" />
           <span className={css.buttonText}>Tasks</span>
         </button>
-        <button type="button" className={css.button}>
+        <button
+          type="button"
+          className={css.button}
+          onClick={() => section("calendar")}
+        >
           <img src={calendar} alt="calendar icon" />
           <span className={css.buttonText}>Calendar</span>
         </button>
       </div>
 
       <div className={css.section}>
-        <button type="button" className={css.button}>
+        <button
+          type="button"
+          className={css.button}
+          onClick={() => section("settings")}
+        >
           <img src={cog} alt="settings icon" />
           <span className={css.buttonText}>Settings</span>
         </button>
