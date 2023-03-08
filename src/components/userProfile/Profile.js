@@ -6,8 +6,10 @@ import TasksContent from "./TaskContent";
 import SettingsContent from "./SettingsContent";
 import CalendarContent from "./CalendarContent";
 
+
 export default function Profile() {
   const [section, setSection] = useState("tasks");
+
   const contentMap = {
     tasks: <TasksContent />,
     calendar: <CalendarContent />,

@@ -1,3 +1,6 @@
+
+
+
 export default function CalendarContent() {
-  return <div> Tu będzie kalendarz</div>;
+  return <div> Calendar avialable soon</div>;
 }
