@@ -3,9 +3,8 @@ import css from "./Profile.module.css";
 import Navigation from "./Navigation";
 import ProfileSection from "./ProfileSection";
 import TasksContent from "./TaskContent";
-import SettingsContent from "./SettingsContent";
+// import SettingsContent from "./SettingsContent";
 import CalendarContent from "./CalendarContent";
-
 
 export default function Profile() {
   const [section, setSection] = useState("tasks");
@@ -13,7 +12,7 @@ export default function Profile() {
   const contentMap = {
     tasks: <TasksContent />,
     calendar: <CalendarContent />,
-    settings: <SettingsContent />,
+    // settings: <SettingsContent />,
   };
 
   return (

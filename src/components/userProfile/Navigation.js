@@ -3,7 +3,7 @@ import css from "./Navigation.module.css";
 import { auth } from "../../config/firebase";
 import { signOut } from "firebase/auth";
 import calendar from "../icons/calendar.svg";
-import cog from "../icons/cog.svg";
+// import cog from "../icons/cog.svg";
 import clipboard from "../icons/clipboard.svg";
 import exit from "../icons/exit.svg";
 
@@ -40,14 +40,14 @@ export default function Navigation({ section }) {
       </div>
 
       <div className={css.section}>
-        <button
+        {/* <button
           type="button"
           className={css.button}
           onClick={() => section("settings")}
         >
           <img src={cog} alt="settings icon" />
           <span className={css.buttonText}>Settings</span>
-        </button>
+        </button> */}
         <button onClick={logout} className={css.button}>
           <img src={exit} alt="exits icon" />
           <span className={css.buttonText}>Logout</span>
