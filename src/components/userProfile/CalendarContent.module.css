@@ -58,5 +58,22 @@
   font-weight: normal;
 }
 .withTasks {
-    background-color: yellow;
-  }
+  background-color: yellow;
+  position: relative;
+}
+
+.taskCount {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -66,21 +66,24 @@ export default function TasksContent() {
   const handleTaskSubmit = async (e) => {
     e.preventDefault();
     if (!taskInput) return;
-    if (!dateInput && !document.getElementById("no-date-checkbox").checked) {
+    if (document.getElementById("no-date-checkbox").checked) {
+      setDateInput("");
+    } else if (!dateInput) {
       setDateError(true);
       return;
     }
+    let taskData = { task: taskInput, completed: false };
+    if (dateInput && !document.getElementById("no-date-checkbox").checked) {
+      taskData.date = dateInput;
+    }
     const userRef = doc(db, currentUser.uid, currentUser.email);
     await updateDoc(userRef, {
-      tasks: arrayUnion({
-        task: taskInput,
-        date: dateInput,
-        completed: false,
-      }),
+      tasks: arrayUnion(taskData),
     });
     setTaskInput("");
     setDateInput("");
     setDateError(false);
+    document.getElementById("no-date-checkbox").checked = false;
   };
 
   const handleTaskDelete = async (task) => {
