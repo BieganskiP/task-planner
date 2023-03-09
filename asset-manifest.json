@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/task-planner/static/css/main.4c0a1f32.css",
-    "main.js": "/task-planner/static/js/main.938b0b61.js",
+    "main.js": "/task-planner/static/js/main.a7c7811c.js",
     "static/media/clipboard.svg": "/task-planner/static/media/clipboard.3b4cc2b9219864bb11a586c6bb16344a.svg",
     "static/media/google.svg": "/task-planner/static/media/google.e65ec0a28fb0e289ed280d47d95e751e.svg",
     "index.html": "/task-planner/index.html",
@@ -10,10 +10,10 @@
     "static/media/user.svg": "/task-planner/static/media/user.5478874299ad642ee1032b4391414707.svg",
     "static/media/exit.svg": "/task-planner/static/media/exit.93163f6c788a80aacb169a0546ccb747.svg",
     "main.4c0a1f32.css.map": "/task-planner/static/css/main.4c0a1f32.css.map",
-    "main.938b0b61.js.map": "/task-planner/static/js/main.938b0b61.js.map"
+    "main.a7c7811c.js.map": "/task-planner/static/js/main.a7c7811c.js.map"
   },
   "entrypoints": [
     "static/css/main.4c0a1f32.css",
-    "static/js/main.938b0b61.js"
+    "static/js/main.a7c7811c.js"
   ]
 }
