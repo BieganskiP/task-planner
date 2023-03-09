@@ -1,3 +1,3 @@
 Simple app to plan task, set deadlines and get notifications.
 
-Created by Patrick Biegański
+Created by Patryk Biegański
