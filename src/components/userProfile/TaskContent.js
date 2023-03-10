@@ -10,6 +10,9 @@ import {
 import { auth, db } from "../../config/firebase";
 import css from "./TaskContent.module.css";
 import TaskList from "./TaskList";
+import FilterButtons from "./FilterButtons";
+import AddTaskForm from "./AddTaskForm";
+import SearchTaskInput from "./SearchTaskInput";
 
 export default function TasksContent() {
   const [taskInput, setTaskInput] = useState("");
@@ -125,42 +128,20 @@ export default function TasksContent() {
         handleTaskDelete={handleTaskDelete}
       />
       <div className={css.controls}>
-        <form onSubmit={handleTaskSubmit} className={css.addTask}>
-          <input
-            type="text"
-            value={taskInput}
-            onChange={(e) => setTaskInput(e.target.value)}
-            placeholder="Add task"
-          />
-          <input
-            type="date"
-            value={dateInput}
-            onChange={(e) => setDateInput(e.target.value)}
-          />
-          <label>
-            task without date
-            <input type="checkbox" id="no-date-checkbox"></input>
-          </label>
-          <button>Add Task</button>
-          {dateError && (
-            <p style={{ color: "red" }}>
-              Please select a date or check the "task without date" box.
-            </p>
-          )}
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={handleSearch}
-            placeholder="Search task"
-          />
-        </form>
-        <div className={css.filterButtons}>
-          <button onClick={() => setFilter("all")}>All</button>
-          <button onClick={() => setFilter("completed")}>Completed</button>
-          <button onClick={() => setFilter("notCompleted")}>
-            Not Completed
-          </button>{" "}
-        </div>
+        <AddTaskForm
+          taskInput={taskInput}
+          setTaskInput={setTaskInput}
+          dateInput={dateInput}
+          setDateInput={setDateInput}
+          handleTaskSubmit={handleTaskSubmit}
+          dateError={dateError}
+          setDateError={setDateError}
+        />
+        <SearchTaskInput
+          searchQuery={searchQuery}
+          handleSearch={handleSearch}
+        />
+        <FilterButtons filter={filter} setFilter={setFilter} />
       </div>
     </div>
   );

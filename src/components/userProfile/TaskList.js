@@ -1,4 +1,3 @@
-import React from "react";
 import css from "./TaskContent.module.css";
 
 export default function TaskList({
