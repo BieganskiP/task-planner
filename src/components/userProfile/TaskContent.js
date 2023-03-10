@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   doc,
   updateDoc,
@@ -9,6 +9,7 @@ import {
 } from "firebase/firestore";
 import { auth, db } from "../../config/firebase";
 import css from "./TaskContent.module.css";
+import TaskList from "./TaskList";
 
 export default function TasksContent() {
   const [taskInput, setTaskInput] = useState("");
@@ -118,34 +119,11 @@ export default function TasksContent() {
 
   return (
     <div className={css.taskSection}>
-      <ul className={css.taskList}>
-        {displayedTasks.map((task) => (
-          <li
-            key={task.task}
-            className={`${css.task} ${
-              task.completed ? css.completed : css.notCompleted
-            }`}
-          >
-            <label className={css.taskName}>
-              <input
-                type="checkbox"
-                checked={task.completed}
-                onChange={() => handleTaskCompleted(task)}
-              />
-              <span className={task.completed ? css.completedTask : ""}>
-                {task.task}
-              </span>
-            </label>
-            <span className={css.taskDate}>{task.date}</span>
-            <button
-              onClick={() => handleTaskDelete(task)}
-              className={css.taskDeleteBtn}
-            >
-              Delete
-            </button>
-          </li>
-        ))}
-      </ul>
+      <TaskList
+        displayedTasks={displayedTasks}
+        handleTaskCompleted={handleTaskCompleted}
+        handleTaskDelete={handleTaskDelete}
+      />
       <div className={css.controls}>
         <form onSubmit={handleTaskSubmit} className={css.addTask}>
           <input
