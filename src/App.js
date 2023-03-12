@@ -1,4 +1,4 @@
-import WelcomeScreen from "./components/welcomeScreen/WelcomeScreen";
+import WelcomeScreen from "./components/loginScreen";
 import Profile from "./components/userProfile/Profile";
 import { auth } from "./config/firebase";
 import css from "./App.module.css";

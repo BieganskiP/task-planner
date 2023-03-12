@@ -1,6 +1,6 @@
 import css from "./LoginScreen.module.css";
 import Login from "./Login";
-import SignInWithGoogle from "./SignUpWithGoogle";
+import SignInWithGoogle from "../signUp/SignUpWithGoogle";
 
 export default function LoginScreen() {
   return (

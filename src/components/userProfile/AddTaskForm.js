@@ -21,6 +21,7 @@ export default function AddTaskForm({
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     if (!dateInput && !e.target[2].checked) {
       setDateError(true);
     } else {

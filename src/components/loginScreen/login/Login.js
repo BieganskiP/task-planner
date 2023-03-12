@@ -1,20 +1,19 @@
 import { useState } from "react";
-import { auth } from "../../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-
-import Input from "../utils/Input";
-import Button from "../utils/Button";
-import css from "./SignUp.module.css";
-import userIcon from "../icons/user.svg";
-import lockIcon from "../icons/lock.svg";
+import Input from "../../utils/Input";
+import Button from "../../utils/Button";
+import css from "./Login.module.css";
+import userIcon from "../../../icons/user.svg";
+import lockIcon from "../../../icons/lock.svg";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../../config/firebase";
 import { Notify } from "notiflix/build/notiflix-notify-aio";
 
 Notify.init({
   width: "280px",
-  position: "center-top",
+  position: "middle-top",
 });
 
-export default function SignUp() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
@@ -33,27 +32,30 @@ export default function SignUp() {
       console.log("Form submitted");
     }
   };
-  const signIn = async () => {
+
+  const loginWithEmail = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
     } catch (err) {
-      if (err.code === "auth/email-already-exists") {
-        Notify.failure("Email already exists, please use diffrent email");
+      if (err.code === "auth/wrong-password") {
+        Notify.failure("Wrong email or password!");
+        console.log("Login failed");
       } else console.log(err.message);
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleLoginSubmit = (e) => {
     e.preventDefault();
     validation();
-    signIn();
+    loginWithEmail();
   };
 
   return (
-    <form onSubmit={handleSubmit} className={css.form}>
+    <form onSubmit={handleLoginSubmit} className={css.form}>
       <Input
         name="email"
         type="email"
+        value={email}
         src={userIcon}
         onChange={(e) => setEmail(e.target.value)}
         error={errors.email}
@@ -61,11 +63,12 @@ export default function SignUp() {
       <Input
         name="password"
         type="password"
+        value={password}
         src={lockIcon}
         onChange={(e) => setPassword(e.target.value)}
         error={errors.password}
       />
-      <Button title="Sign Up" type="submit" />
+      <Button title="Login" type="submit" />
     </form>
   );
 }

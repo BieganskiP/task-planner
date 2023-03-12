@@ -1,7 +1,9 @@
-import SignUpScreen from "./SignUpScreen";
-import LoginScreen from "./LoginScreen";
 import { useState } from "react";
-import css from "./WelcomeScreen.module.css";
+import css from "./index.module.css";
+
+import SignUpScreen from "./signUp/SignUpScreen";
+import LoginScreen from "./login/LoginScreen";
+
 export default function WelcomeScreen() {
   const [toggleState, settoggleState] = useState(true);
   const toggleChecked = () => settoggleState((toggleState) => !toggleState);
